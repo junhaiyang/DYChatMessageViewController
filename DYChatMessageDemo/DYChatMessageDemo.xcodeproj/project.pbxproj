@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0D0A7919643E9F005774C4 /* DYTextMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D0A7819643E9F005774C4 /* DYTextMessageView.m */; };
+		2C0D0A7C19643EB2005774C4 /* DYImageMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D0A7B19643EB2005774C4 /* DYImageMessageView.m */; };
+		2C0D0A7F19643EC5005774C4 /* DYVoiceMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D0A7E19643EC5005774C4 /* DYVoiceMessageView.m */; };
+		2C0D0A9219644488005774C4 /* DYChatMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D0A9019644488005774C4 /* DYChatMessageViewController.m */; };
+		2C0D0A9319644488005774C4 /* DYChatMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C0D0A9119644488005774C4 /* DYChatMessageViewController.xib */; };
+		2C0D0A961964488B005774C4 /* DYMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D0A951964488B005774C4 /* DYMessageCell.m */; };
+		2C0D0A99196455DD005774C4 /* chat_bubble_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C0D0A97196455DD005774C4 /* chat_bubble_right.png */; };
+		2C0D0A9A196455DD005774C4 /* chat_bubble_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C0D0A98196455DD005774C4 /* chat_bubble_right@2x.png */; };
 		2C5629C41961A83300D7008B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5629C31961A83300D7008B /* Foundation.framework */; };
 		2C5629C61961A83300D7008B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5629C51961A83300D7008B /* CoreGraphics.framework */; };
 		2C5629C81961A83300D7008B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5629C71961A83300D7008B /* UIKit.framework */; };
@@ -33,6 +41,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C0D0A7719643E9F005774C4 /* DYTextMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYTextMessageView.h; sourceTree = "<group>"; };
+		2C0D0A7819643E9F005774C4 /* DYTextMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYTextMessageView.m; sourceTree = "<group>"; };
+		2C0D0A7A19643EB2005774C4 /* DYImageMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYImageMessageView.h; sourceTree = "<group>"; };
+		2C0D0A7B19643EB2005774C4 /* DYImageMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYImageMessageView.m; sourceTree = "<group>"; };
+		2C0D0A7D19643EC5005774C4 /* DYVoiceMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYVoiceMessageView.h; sourceTree = "<group>"; };
+		2C0D0A7E19643EC5005774C4 /* DYVoiceMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYVoiceMessageView.m; sourceTree = "<group>"; };
+		2C0D0A8F19644488005774C4 /* DYChatMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYChatMessageViewController.h; sourceTree = "<group>"; };
+		2C0D0A9019644488005774C4 /* DYChatMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYChatMessageViewController.m; sourceTree = "<group>"; };
+		2C0D0A9119644488005774C4 /* DYChatMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYChatMessageViewController.xib; sourceTree = "<group>"; };
+		2C0D0A941964488B005774C4 /* DYMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMessageCell.h; sourceTree = "<group>"; };
+		2C0D0A951964488B005774C4 /* DYMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMessageCell.m; sourceTree = "<group>"; };
+		2C0D0A97196455DD005774C4 /* chat_bubble_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_bubble_right.png; sourceTree = "<group>"; };
+		2C0D0A98196455DD005774C4 /* chat_bubble_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bubble_right@2x.png"; sourceTree = "<group>"; };
 		2C5629C01961A83300D7008B /* DYChatMessageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYChatMessageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5629C31961A83300D7008B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C5629C51961A83300D7008B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -77,6 +98,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C0D0A8E19644488005774C4 /* DYChatMessageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C0D0A8F19644488005774C4 /* DYChatMessageViewController.h */,
+				2C0D0A9019644488005774C4 /* DYChatMessageViewController.m */,
+				2C0D0A9119644488005774C4 /* DYChatMessageViewController.xib */,
+			);
+			path = DYChatMessageViewController;
+			sourceTree = "<group>";
+		};
 		2C5629B71961A83300D7008B = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +192,8 @@
 		2C5629F31961A98500D7008B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2C0D0A97196455DD005774C4 /* chat_bubble_right.png */,
+				2C0D0A98196455DD005774C4 /* chat_bubble_right@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -179,6 +212,14 @@
 			children = (
 				2C5629F91961A9CE00D7008B /* DYMessageView.h */,
 				2C5629FA1961A9CE00D7008B /* DYMessageView.m */,
+				2C0D0A7719643E9F005774C4 /* DYTextMessageView.h */,
+				2C0D0A7819643E9F005774C4 /* DYTextMessageView.m */,
+				2C0D0A7A19643EB2005774C4 /* DYImageMessageView.h */,
+				2C0D0A7B19643EB2005774C4 /* DYImageMessageView.m */,
+				2C0D0A7D19643EC5005774C4 /* DYVoiceMessageView.h */,
+				2C0D0A7E19643EC5005774C4 /* DYVoiceMessageView.m */,
+				2C0D0A941964488B005774C4 /* DYMessageCell.h */,
+				2C0D0A951964488B005774C4 /* DYMessageCell.m */,
 			);
 			path = MessageViews;
 			sourceTree = "<group>";
@@ -186,8 +227,8 @@
 		2C5629F61961A98500D7008B /* ViewsControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2C0D0A8E19644488005774C4 /* DYChatMessageViewController */,
 				2C5629F71961A98500D7008B /* DYChatImageViewController */,
-				2C5629F81961A98500D7008B /* DYChatMessageViewController */,
 			);
 			path = ViewsControllers;
 			sourceTree = "<group>";
@@ -197,13 +238,6 @@
 			children = (
 			);
 			path = DYChatImageViewController;
-			sourceTree = "<group>";
-		};
-		2C5629F81961A98500D7008B /* DYChatMessageViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DYChatMessageViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +315,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0D0A99196455DD005774C4 /* chat_bubble_right.png in Resources */,
+				2C0D0A9A196455DD005774C4 /* chat_bubble_right@2x.png in Resources */,
 				2C5629CE1961A83300D7008B /* InfoPlist.strings in Resources */,
+				2C0D0A9319644488005774C4 /* DYChatMessageViewController.xib in Resources */,
 				2C5629D61961A83300D7008B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,8 +338,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0D0A7919643E9F005774C4 /* DYTextMessageView.m in Sources */,
 				2C5629D41961A83300D7008B /* AppDelegate.m in Sources */,
 				2C5629FB1961A9CE00D7008B /* DYMessageView.m in Sources */,
+				2C0D0A7C19643EB2005774C4 /* DYImageMessageView.m in Sources */,
+				2C0D0A961964488B005774C4 /* DYMessageCell.m in Sources */,
+				2C0D0A9219644488005774C4 /* DYChatMessageViewController.m in Sources */,
+				2C0D0A7F19643EC5005774C4 /* DYVoiceMessageView.m in Sources */,
 				2C5629D01961A83300D7008B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +544,7 @@
 				2C5629EE1961A83300D7008B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C5629EF1961A83300D7008B /* Build configuration list for PBXNativeTarget "DYChatMessageDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +553,7 @@
 				2C5629F11961A83300D7008B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

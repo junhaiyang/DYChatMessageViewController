@@ -7,29 +7,33 @@
 //
 
 #import <Foundation/Foundation.h>
+ 
+extern NSString *const kDYMessageTypeText;
+extern NSString *const kDYMessageTypeImage;
+extern NSString *const kDYMessageTypeVoice;
+extern NSString *const kDYMessageTypeToast;
 
-#define DY_MESSAGE_TYPE_TEXT @"text"
-#define DY_MESSAGE_TYPE_IMAGE @"image"
-#define DY_MESSAGE_TYPE_VOICE @"voice"
-#define DY_MESSAGE_TYPE_TOAST @"toast"
+
+#define CHAT_CONTENT_LONG_CLICK_ACTION_NOTIFICATION  @"chat_content_long_click_action"
+
 
 typedef NS_ENUM(NSInteger, DYMessageState) {
-    DYMessageStateNone          =   0,
+    DYMessageStateNone          =   0,  //正常状态
     
-    DYMessageStateSending       =   1,
-    DYMessageStateSendFail      =   2,
+    DYMessageStateSending       =   1,  //发送中
+    DYMessageStateSendFail      =   2,  //发送失败
     
-    DYMessageStateUnread        =   3,
-    DYMessageStateReading       =   4,
+    DYMessageStateUnread        =   3,  //未读取
+    DYMessageStateReading       =   4,  //读取中
     
-    DYMessageStateRecording     =   5,
+    DYMessageStateRecording     =   5,  //录制中
     
 };
 
 typedef NS_ENUM(NSInteger, DYMessageUserType) {
-    DYMessageUserSendType          =   0,
+    DYMessageUserSendType          =   0,   //发送消息
     
-    DYMessageUserReceiveType       =   1,
+    DYMessageUserReceiveType       =   1,   //接收消息
     
 };
 
@@ -43,8 +47,11 @@ typedef NS_ENUM(NSInteger, DYMessageUserType) {
 
 @property (nonatomic, assign) NSTimeInterval mediaTime;
 
-@property (nonatomic,assign) CGSize size;
+@property (nonatomic, assign) CGSize size;
 
+@property (nonatomic, strong) NSString *icon;
+
+-(void)prepareBuild;
 
 @end
 
@@ -73,10 +80,8 @@ typedef NS_ENUM(NSInteger, DYMessageUserType) {
 +(CGSize)messageSizeToFit:(DYMessageContent *)msg; //计算出所占位置大小
 
 -(CGSize)messageSizeToFit;
-
--(void)messageViewShow;                     //显示数据和位置布局
-
--(void)messageStateNotify;                  //变化数据状态 
+ 
+-(void)messageStateResresh;                //刷新数据
 
 -(void)recyleView;                         //释放数据内存
 

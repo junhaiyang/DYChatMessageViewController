@@ -8,9 +8,17 @@
 
 #import "DYMessageView.h"
 
+NSString *const kDYMessageTypeText      = @"Text";
+NSString *const kDYMessageTypeImage      = @"Image";
+NSString *const kDYMessageTypeVoice      = @"Voice";
+NSString *const kDYMessageTypeToast      = @"Toast";
+
 @implementation DYMessageContent
 
 
+-(void)prepareBuild{
+    self.size = [DYMessageFactory messageSizeToFit:self];
+}
 
 @end
 
@@ -50,6 +58,12 @@
 
 
 +(void)registerMessageType:(NSString *)type viewClazz:(Class<DYMessageContentViewDelegate>)clazz{
+    
+    UIView<DYMessageContentViewDelegate> *view =[[DYMessageFactory sharedManager].caches objectForKey:type];
+    if(view&&[view isMemberOfClass:clazz]){
+        return;
+    }
+    
     [[DYMessageFactory sharedManager].classes setObject:clazz forKey:type];
 }
 
