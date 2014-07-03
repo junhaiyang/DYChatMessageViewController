@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DYMessageView.h"
+#import "DYMessageObj.h"
 
 #define ICON_WIDTH_HEIGHT  40.0f
 
-@interface DYMessageCell : UITableViewCell{
+@interface DYMessageDataCell : UITableViewCell{
     UIImageView *_bubbleView;
     UIView<DYMessageContentViewDelegate> *_messageContentView;
     
@@ -24,5 +24,6 @@
 @property (nonatomic,strong) UIImage *bubbleImage;
 
 -(void)refreshCell;
+-(void)releaseCell;
 
 @end

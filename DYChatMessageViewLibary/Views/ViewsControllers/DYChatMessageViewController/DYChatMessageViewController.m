@@ -8,9 +8,9 @@
 
 #import "DYChatMessageViewController.h"
 
-#import "DYMessageView.h"
+#import "DYMessageObj.h"
 
-#import "DYMessageCell.h"
+#import "DYMessageDataCell.h"
 
 @interface DYChatMessageViewController ()
 
@@ -30,13 +30,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor=[UIColor colorWithWhite:0.639 alpha:1.000]; 
     self.messages =[[NSMutableArray alloc] init];
-    self.container.backgroundColor=[UIColor redColor];
+    self.container.backgroundColor=[UIColor clearColor];
     
     {
         DYMessageContent *data =[[DYMessageContent alloc] init];
         data.type=kDYMessageTypeText;
-        NSString *text=@"按时大大阿斯达十大的飒飒大叔大叔";
+        data.userType =DYMessageUserSendType;
+        NSString *text=@"按时大大阿斯达十大";
         data.message=[text dataUsingEncoding:NSUTF8StringEncoding];
         [data prepareBuild];
         [self.messages addObject:data];
@@ -44,6 +46,7 @@
     {
         DYMessageContent *data =[[DYMessageContent alloc] init];
         data.type=kDYMessageTypeText;
+        data.userType =DYMessageUserReceiveType;
         NSString *text=@"萨达速度按时大大阿斯达十按时大大阿斯达十大的飒飒大叔大叔按时大大阿斯达十大的飒飒大叔大叔大的飒飒大叔大叔大叔大叔的撒旦撒";
         data.message=[text dataUsingEncoding:NSUTF8StringEncoding];
         [data prepareBuild];
@@ -52,7 +55,8 @@
     {
         DYMessageContent *data =[[DYMessageContent alloc] init];
         data.type=kDYMessageTypeText;
-        NSString *text=@"萨达速度按时大大阿斯达十按时大大阿斯达十大的飒飒大叔大叔按时大大阿斯达十大的飒飒大叔大叔大的按时大大阿斯达十大的飒飒大叔大叔按时大大阿斯达十大的飒飒大叔大叔飒飒大叔大叔大叔大叔的撒旦撒";
+        data.userType =DYMessageUserSendType;
+        NSString *text=@"萨达速度按时大大阿斯达十按时大大阿斯达十大的飒飒大叔大叔按时大大阿斯达十大的飒飒大叔大叔大的飒飒大叔大叔大叔大叔的撒旦撒";
         data.message=[text dataUsingEncoding:NSUTF8StringEncoding];
         [data prepareBuild];
         [self.messages addObject:data];
@@ -60,15 +64,50 @@
     {
         DYMessageContent *data =[[DYMessageContent alloc] init];
         data.type=kDYMessageTypeText;
-        NSString *text=@"萨达速度按时大大阿斯达十大的飒飒大叔大叔按时大大阿斯达十大的飒飒大叔大叔按时大大阿斯达十大的飒飒大叔大叔大叔大叔的撒旦撒";
+        data.userType =DYMessageUserSendType;
+        NSString *text=@"萨达速度按时大大阿斯达十按时大大阿斯达十大的飒飒大叔大叔按时大大阿斯达十大的飒飒大叔大叔大的按时大大阿斯达十大的飒飒大叔大叔按时大大阿斯达十大的飒飒大叔大叔飒飒大叔大叔大叔大叔的撒旦撒";
         data.message=[text dataUsingEncoding:NSUTF8StringEncoding];
         [data prepareBuild];
         [self.messages addObject:data];
     }
     
+    {
+        DYMessageContent *data =[[DYMessageContent alloc] init];
+        data.type=kDYMessageTypeVoice;
+        data.userType =DYMessageUserSendType;
+        data.mediaTime = 10.0f;
+        [data prepareBuild];
+        [self.messages addObject:data];
+    }
+    
+    {
+        DYMessageContent *data =[[DYMessageContent alloc] init];
+        data.type=kDYMessageTypeVoice;
+        data.userType =DYMessageUserReceiveType;
+        data.mediaTime = 20.0f;
+        [data prepareBuild];
+        [self.messages addObject:data];
+    }
+    
+    {
+        DYMessageContent *data =[[DYMessageContent alloc] init];
+        data.type=kDYMessageTypeVoice;
+        data.userType =DYMessageUserSendType;
+        data.mediaTime = 20.0f;
+        [data prepareBuild];
+        [self.messages addObject:data];
+    }
     
     
-    // Do any additional setup after loading the view from its nib.
+    {
+        DYMessageContent *data =[[DYMessageContent alloc] init];
+        data.type=kDYMessageTypeVoice;
+        data.userType =DYMessageUserSendType;
+        data.mediaTime = 30.0f;
+        [data prepareBuild];
+        [self.messages addObject:data];
+    }
+     
 }
 
 
@@ -85,21 +124,25 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     DYMessageContent *message = [self.messages objectAtIndex:indexPath.row];
-    return message.size.height;
+    return message.size.height+30.0f;
     
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    static NSString *DYMessageLeftCell = @"DYMessageLeftCell";
+    static NSString *DYMessageLeftCell = @"DYMessageDataCell";
     
-    DYMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:DYMessageLeftCell];
+    DYMessageDataCell *cell = [tableView dequeueReusableCellWithIdentifier:DYMessageLeftCell];
     if (cell == nil) {
-        cell = [[DYMessageCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:DYMessageLeftCell];
+        cell = [[DYMessageDataCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:DYMessageLeftCell];
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
-        cell.backgroundColor = [UIColor whiteColor];
+    }else{
+        [cell releaseCell];
     }
+    DYMessageContent *message = [self.messages objectAtIndex:indexPath.row];
+    cell.message =message;
+    [cell refreshCell];
     
     return cell;
     

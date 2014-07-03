@@ -12,9 +12,14 @@
 		2C0D0A7F19643EC5005774C4 /* DYVoiceMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D0A7E19643EC5005774C4 /* DYVoiceMessageView.m */; };
 		2C0D0A9219644488005774C4 /* DYChatMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D0A9019644488005774C4 /* DYChatMessageViewController.m */; };
 		2C0D0A9319644488005774C4 /* DYChatMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C0D0A9119644488005774C4 /* DYChatMessageViewController.xib */; };
-		2C0D0A961964488B005774C4 /* DYMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D0A951964488B005774C4 /* DYMessageCell.m */; };
 		2C0D0A99196455DD005774C4 /* chat_bubble_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C0D0A97196455DD005774C4 /* chat_bubble_right.png */; };
 		2C0D0A9A196455DD005774C4 /* chat_bubble_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C0D0A98196455DD005774C4 /* chat_bubble_right@2x.png */; };
+		2C366465196556F8004C9819 /* DYMessageDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C366464196556F8004C9819 /* DYMessageDataCell.m */; };
+		2C3664681965585E004C9819 /* DYMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3664671965585E004C9819 /* DYMessageView.m */; };
+		2C3FE7781965405900F5325C /* chat_bubble_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3FE7741965405900F5325C /* chat_bubble_left.png */; };
+		2C3FE7791965405900F5325C /* chat_bubble_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3FE7751965405900F5325C /* chat_bubble_left@2x.png */; };
+		2C3FE77A1965405900F5325C /* chat_user_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3FE7761965405900F5325C /* chat_user_icon.png */; };
+		2C3FE77B1965405900F5325C /* chat_user_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3FE7771965405900F5325C /* chat_user_icon@2x.png */; };
 		2C5629C41961A83300D7008B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5629C31961A83300D7008B /* Foundation.framework */; };
 		2C5629C61961A83300D7008B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5629C51961A83300D7008B /* CoreGraphics.framework */; };
 		2C5629C81961A83300D7008B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5629C71961A83300D7008B /* UIKit.framework */; };
@@ -27,7 +32,7 @@
 		2C5629DF1961A83300D7008B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5629C71961A83300D7008B /* UIKit.framework */; };
 		2C5629E71961A83300D7008B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C5629E51961A83300D7008B /* InfoPlist.strings */; };
 		2C5629E91961A83300D7008B /* DYChatMessageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5629E81961A83300D7008B /* DYChatMessageDemoTests.m */; };
-		2C5629FB1961A9CE00D7008B /* DYMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5629FA1961A9CE00D7008B /* DYMessageView.m */; };
+		2C5629FB1961A9CE00D7008B /* DYMessageObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5629FA1961A9CE00D7008B /* DYMessageObj.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +55,16 @@
 		2C0D0A8F19644488005774C4 /* DYChatMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYChatMessageViewController.h; sourceTree = "<group>"; };
 		2C0D0A9019644488005774C4 /* DYChatMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYChatMessageViewController.m; sourceTree = "<group>"; };
 		2C0D0A9119644488005774C4 /* DYChatMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYChatMessageViewController.xib; sourceTree = "<group>"; };
-		2C0D0A941964488B005774C4 /* DYMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMessageCell.h; sourceTree = "<group>"; };
-		2C0D0A951964488B005774C4 /* DYMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMessageCell.m; sourceTree = "<group>"; };
 		2C0D0A97196455DD005774C4 /* chat_bubble_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_bubble_right.png; sourceTree = "<group>"; };
 		2C0D0A98196455DD005774C4 /* chat_bubble_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bubble_right@2x.png"; sourceTree = "<group>"; };
+		2C366463196556F8004C9819 /* DYMessageDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DYMessageDataCell.h; path = DYMessageCell/DYMessageDataCell.h; sourceTree = "<group>"; };
+		2C366464196556F8004C9819 /* DYMessageDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DYMessageDataCell.m; path = DYMessageCell/DYMessageDataCell.m; sourceTree = "<group>"; };
+		2C3664661965585E004C9819 /* DYMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMessageView.h; sourceTree = "<group>"; };
+		2C3664671965585E004C9819 /* DYMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMessageView.m; sourceTree = "<group>"; };
+		2C3FE7741965405900F5325C /* chat_bubble_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_bubble_left.png; sourceTree = "<group>"; };
+		2C3FE7751965405900F5325C /* chat_bubble_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bubble_left@2x.png"; sourceTree = "<group>"; };
+		2C3FE7761965405900F5325C /* chat_user_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_user_icon.png; sourceTree = "<group>"; };
+		2C3FE7771965405900F5325C /* chat_user_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_user_icon@2x.png"; sourceTree = "<group>"; };
 		2C5629C01961A83300D7008B /* DYChatMessageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYChatMessageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5629C31961A83300D7008B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C5629C51961A83300D7008B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,8 +81,8 @@
 		2C5629E41961A83300D7008B /* DYChatMessageDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DYChatMessageDemoTests-Info.plist"; sourceTree = "<group>"; };
 		2C5629E61961A83300D7008B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C5629E81961A83300D7008B /* DYChatMessageDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYChatMessageDemoTests.m; sourceTree = "<group>"; };
-		2C5629F91961A9CE00D7008B /* DYMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMessageView.h; sourceTree = "<group>"; };
-		2C5629FA1961A9CE00D7008B /* DYMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMessageView.m; sourceTree = "<group>"; };
+		2C5629F91961A9CE00D7008B /* DYMessageObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMessageObj.h; sourceTree = "<group>"; };
+		2C5629FA1961A9CE00D7008B /* DYMessageObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMessageObj.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +203,10 @@
 		2C5629F31961A98500D7008B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2C3FE7741965405900F5325C /* chat_bubble_left.png */,
+				2C3FE7751965405900F5325C /* chat_bubble_left@2x.png */,
+				2C3FE7761965405900F5325C /* chat_user_icon.png */,
+				2C3FE7771965405900F5325C /* chat_user_icon@2x.png */,
 				2C0D0A97196455DD005774C4 /* chat_bubble_right.png */,
 				2C0D0A98196455DD005774C4 /* chat_bubble_right@2x.png */,
 			);
@@ -210,16 +225,18 @@
 		2C5629F51961A98500D7008B /* MessageViews */ = {
 			isa = PBXGroup;
 			children = (
-				2C5629F91961A9CE00D7008B /* DYMessageView.h */,
-				2C5629FA1961A9CE00D7008B /* DYMessageView.m */,
+				2C366463196556F8004C9819 /* DYMessageDataCell.h */,
+				2C366464196556F8004C9819 /* DYMessageDataCell.m */,
+				2C5629F91961A9CE00D7008B /* DYMessageObj.h */,
+				2C5629FA1961A9CE00D7008B /* DYMessageObj.m */,
 				2C0D0A7719643E9F005774C4 /* DYTextMessageView.h */,
 				2C0D0A7819643E9F005774C4 /* DYTextMessageView.m */,
 				2C0D0A7A19643EB2005774C4 /* DYImageMessageView.h */,
 				2C0D0A7B19643EB2005774C4 /* DYImageMessageView.m */,
 				2C0D0A7D19643EC5005774C4 /* DYVoiceMessageView.h */,
 				2C0D0A7E19643EC5005774C4 /* DYVoiceMessageView.m */,
-				2C0D0A941964488B005774C4 /* DYMessageCell.h */,
-				2C0D0A951964488B005774C4 /* DYMessageCell.m */,
+				2C3664661965585E004C9819 /* DYMessageView.h */,
+				2C3664671965585E004C9819 /* DYMessageView.m */,
 			);
 			path = MessageViews;
 			sourceTree = "<group>";
@@ -315,9 +332,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3FE7781965405900F5325C /* chat_bubble_left.png in Resources */,
 				2C0D0A99196455DD005774C4 /* chat_bubble_right.png in Resources */,
 				2C0D0A9A196455DD005774C4 /* chat_bubble_right@2x.png in Resources */,
+				2C3FE77A1965405900F5325C /* chat_user_icon.png in Resources */,
+				2C3FE7791965405900F5325C /* chat_bubble_left@2x.png in Resources */,
 				2C5629CE1961A83300D7008B /* InfoPlist.strings in Resources */,
+				2C3FE77B1965405900F5325C /* chat_user_icon@2x.png in Resources */,
 				2C0D0A9319644488005774C4 /* DYChatMessageViewController.xib in Resources */,
 				2C5629D61961A83300D7008B /* Images.xcassets in Resources */,
 			);
@@ -339,12 +360,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C0D0A7919643E9F005774C4 /* DYTextMessageView.m in Sources */,
+				2C3664681965585E004C9819 /* DYMessageView.m in Sources */,
 				2C5629D41961A83300D7008B /* AppDelegate.m in Sources */,
-				2C5629FB1961A9CE00D7008B /* DYMessageView.m in Sources */,
+				2C5629FB1961A9CE00D7008B /* DYMessageObj.m in Sources */,
 				2C0D0A7C19643EB2005774C4 /* DYImageMessageView.m in Sources */,
-				2C0D0A961964488B005774C4 /* DYMessageCell.m in Sources */,
 				2C0D0A9219644488005774C4 /* DYChatMessageViewController.m in Sources */,
 				2C0D0A7F19643EC5005774C4 /* DYVoiceMessageView.m in Sources */,
+				2C366465196556F8004C9819 /* DYMessageDataCell.m in Sources */,
 				2C5629D01961A83300D7008B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

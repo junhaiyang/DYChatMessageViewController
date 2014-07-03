@@ -9,9 +9,16 @@
 #import "DYTextMessageView.h" 
 
 @implementation DYTextMessageView
-
+@synthesize message;
 +(void)load{
     [DYMessageFactory registerMessageType:kDYMessageTypeText viewClazz:[DYTextMessageView class]];
+}
+
+-(void)setMessage:(DYMessageContent *)_message{
+    message=_message;
+}
+-(DYMessageContent *)message{
+    return message;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -19,16 +26,19 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self.numberOfLines =0 ;
+        self.font = [[self class] textFont];
+        self.backgroundColor =[UIColor clearColor];
     }
     return self;
 }
 
 +(UIFont *)textFont{
-    return [UIFont systemFontOfSize:16.0f];
+    return [UIFont systemFontOfSize:14.0f];
 }
 
 +(CGFloat)textWidth{
-    return 160.0f;
+    return 210.0f;
 }
 
 +(CGSize)messageSizeToFit:(DYMessageContent *)msg{
@@ -49,7 +59,8 @@
 }
 
 -(void)messageStateResresh{
-
+    NSString *string = [[NSString alloc] initWithBytes:message.message.bytes length:message.message.length encoding:NSUTF8StringEncoding];
+    self.text =string;
 }
 
 -(void)recyleView{

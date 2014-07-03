@@ -9,7 +9,7 @@
 #import "DYVoiceMessageView.h"
 
 @implementation DYVoiceMessageView
-
+@synthesize message;
 +(void)load{
     [DYMessageFactory registerMessageType:kDYMessageTypeVoice viewClazz:[DYVoiceMessageView class]];
 }
@@ -23,13 +23,39 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+-(void)setMessage:(DYMessageContent *)_message{
+    message =_message;
 }
-*/
+
+-(DYMessageContent *)message{
+    
+    return message;
+}
+
++(CGSize)messageSizeToFit:(DYMessageContent *)msg{
+    CGFloat maxWidth  = 180.0f;
+    CGFloat minWidth  = 50.0f;
+    
+    
+    CGFloat perWidth =  (maxWidth - minWidth)/30.0f;
+    
+    return CGSizeMake(50+perWidth*msg.mediaTime, 20.0f);
+}
+
+-(CGSize)messageSizeToFit{
+    return [[self class] messageSizeToFit:self.message];
+}
+
+-(void)messageStateResresh{
+
+}
+
+-(void)recyleView{
+
+}
+
+-(void)releaseView{
+
+}
 
 @end

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DYMessageView.h"
+#import "DYMessageObj.h"
 
-@interface DYTextMessageView : UIView<DYMessageContentViewDelegate>
+@interface DYTextMessageView : UILabel<DYMessageContentViewDelegate>
+
+@property (nonatomic,strong) DYMessageContent *message;
 
 +(UIFont *)textFont;
 

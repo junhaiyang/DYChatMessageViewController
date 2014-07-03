@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DYMessageView.h"
+#import "DYMessageObj.h"
 
 @interface DYImageMessageView : UIView<DYMessageContentViewDelegate>
 
