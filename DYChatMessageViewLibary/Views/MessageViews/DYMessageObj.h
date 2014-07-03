@@ -15,6 +15,8 @@ extern NSString *const kDYMessageTypeToast;
 
 #define CHAT_CONTENT_LONG_CLICK_ACTION_NOTIFICATION  @"chat_content_long_click_action"
 
+#define DY_MESSAGE_SHOW_DATE_HEIGHT 30.0f
+
 
 typedef NS_ENUM(NSInteger, DYMessageState) {
     DYMessageStateNone          =   0,  //正常状态
@@ -35,6 +37,16 @@ typedef NS_ENUM(NSInteger, DYMessageUserType) {
     DYMessageUserReceiveType       =   1,   //接收消息
     
 };
+
+typedef NS_ENUM(NSInteger, DYMessageMenuType) {
+    DYMessageMenuTypeNone          =   0,
+    
+    DYMessageMenuTypeCopy          =   1 << 0,
+    DYMessageMenuTypeForward       =   1 << 1,
+    DYMessageMenuTypeSave          =   1 << 2,
+    DYMessageMenuTypeDelete        =   1 << 3,
+    
+};
  
 
 @interface DYMessageContent : NSObject
@@ -47,12 +59,15 @@ typedef NS_ENUM(NSInteger, DYMessageUserType) {
 
 @property (nonatomic, assign) NSTimeInterval mediaTime;
 
-@property (nonatomic, assign) CGSize size;
+@property (nonatomic, assign) CGSize contentSize;
+
+@property (nonatomic, assign) CGFloat height;
 
 @property (nonatomic, strong) NSString *icon;
 
 @property (nonatomic, assign) DYMessageUserType userType;
 
+@property (nonatomic, assign) BOOL showDate;
 
 -(void)prepareBuild;
 
@@ -91,5 +106,15 @@ typedef NS_ENUM(NSInteger, DYMessageUserType) {
 -(void)recyleView;                         //释放数据内存
 
 -(void)releaseView;                        //完全释放界面内存
+
+-(DYMessageMenuType)supportMenuType;
+
+@end
+
+@interface UIMenuItem(UIMenuItemExtra)
+
+-(void)setMenuTypeKey:(NSString *)menuTypeKey;
+
+-(NSString *)menuTypeKey;
 
 @end

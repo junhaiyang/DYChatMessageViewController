@@ -22,18 +22,20 @@
         
         self.backgroundColor=[UIColor clearColor];
         
-        textLabel =[[UILabel alloc] initWithFrame:CGRectZero];
-        textLabel.numberOfLines =0 ;
-        textLabel.font = [[self class] textFont];
-        [_bubbleView addSubview:textLabel];
         
-        _bubbleImage = [[UIImage imageNamed:@"chat_bubble_left"] resizableImageWithCapInsets:UIEdgeInsetsMake(30, 10, 15, 5)];
+        _bubbleImage = [[UIImage imageNamed:@"chat_toast"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
         
         _bubbleView = [[UIImageView alloc] init];
         _bubbleView.userInteractionEnabled = YES;
         _bubbleView.backgroundColor=[UIColor clearColor];
         _bubbleView.image =_bubbleImage;
         [self addSubview:_bubbleView];
+        
+        textLabel =[[UILabel alloc] initWithFrame:CGRectZero];
+        textLabel.numberOfLines =0 ;
+        textLabel.backgroundColor=[UIColor clearColor];
+        textLabel.font = [[self class] textFont];
+        [_bubbleView addSubview:textLabel];
     }
     return self;
 }
@@ -43,7 +45,7 @@
 }
 
 +(CGFloat)textWidth{
-    return 270.0f;
+    return 240.0f;
 }
 
 -(void)setMessage:(DYMessageContent *)_message{
@@ -62,6 +64,7 @@
     } else {
         textSize.height = textSize.height;
     }
+    msg.height = textSize.height + 20.0f;
     
     return textSize;
 }
@@ -74,18 +77,23 @@
 
 -(void)messageStateResresh{
     
-        
-        CGFloat _bubbleX = (self.frame.size.width- (self.message.size.width+20))/2;
-        CGFloat _bubbleHeight = self.message.size.height;
-        if(_bubbleHeight<20){
-            _bubbleHeight = 20;
-        }
-        
-        _bubbleView.frame = CGRectMake(_bubbleX, MARGIN_ITEM_TOP_LEFT_RIGHT, self.message.size.width+20, _bubbleHeight+15);
-        
-    _bubbleImage = [[UIImage imageNamed:@"chat_toast"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
-        _bubbleView.image =_bubbleImage;
-         
+    CGFloat _bubbleX = (self.frame.size.width- (self.message.contentSize.width+20))/2;
+    CGFloat _bubbleHeight = self.message.contentSize.height;
+    if(_bubbleHeight<15){
+        _bubbleHeight = 15;
+    }
+    
+    _bubbleView.frame = CGRectMake(_bubbleX, MARGIN_ITEM_TOP_LEFT_RIGHT, self.message.contentSize.width+20, _bubbleHeight+10);
+    
+    CGFloat textX = (_bubbleView.frame.size.width-self.message.contentSize.width)/2.0f;
+    CGFloat textY = (_bubbleView.frame.size.height-self.message.contentSize.height)/2.0f;
+    
+    textLabel.frame= CGRectMake(textX, textY, self.message.contentSize.width, self.message.contentSize.height);
+    NSString *string = [[NSString alloc] initWithBytes:self.message.message.bytes length:self.message.message.length encoding:NSUTF8StringEncoding];
+    textLabel.text =string;
+    
+    
+    
 }
 -(void)recyleView{
     
@@ -93,6 +101,10 @@
 
 -(void)releaseView{
     
+}
+
+-(DYMessageMenuType)supportMenuType{
+    return DYMessageMenuTypeNone;
 }
 
 @end

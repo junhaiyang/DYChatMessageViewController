@@ -6,6 +6,7 @@
 //
 
 #import "DYMessageObj.h"
+#import <objc/runtime.h>
 
 NSString *const kDYMessageTypeText      = @"Text";
 NSString *const kDYMessageTypeImage      = @"Image";
@@ -16,7 +17,9 @@ NSString *const kDYMessageTypeToast      = @"Toast";
 
 
 -(void)prepareBuild{
-    self.size = [DYMessageFactory messageSizeToFit:self];
+    self.contentSize = [DYMessageFactory messageSizeToFit:self];
+    if(self.showDate)
+        self.height+=DY_MESSAGE_SHOW_DATE_HEIGHT;
 }
 
 @end
@@ -107,6 +110,19 @@ NSString *const kDYMessageTypeToast      = @"Toast";
     }
     
     [[DYMessageFactory sharedManager].caches removeAllObjects];
+}
+
+@end
+
+@implementation  UIMenuItem(UIMenuItemExtra)
+
+static const char *menuTypeKeyKey        ="__menuTypeKey__";
+
+-(void)setMenuTypeKey:(NSString *)menuTypeKey{
+    objc_setAssociatedObject(self, menuTypeKeyKey, menuTypeKey, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+-(NSString *)menuTypeKey{
+    return objc_getAssociatedObject(self, menuTypeKeyKey);
 }
 
 @end

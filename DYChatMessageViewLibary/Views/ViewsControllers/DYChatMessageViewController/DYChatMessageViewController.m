@@ -38,7 +38,16 @@
         DYMessageContent *data =[[DYMessageContent alloc] init];
         data.type=kDYMessageTypeText;
         data.userType =DYMessageUserSendType;
+        data.showDate = YES;
         NSString *text=@"按时大大阿斯达十大";
+        data.message=[text dataUsingEncoding:NSUTF8StringEncoding];
+        [data prepareBuild];
+        [self.messages addObject:data];
+    }{
+        DYMessageContent *data =[[DYMessageContent alloc] init];
+        data.type=kDYMessageTypeToast;
+        data.userType =DYMessageUserSendType;
+        NSString *text=@"萨达速度按时大大阿斯达十按时大大阿斯达十大的飒飒大叔大叔按时大大阿斯达十大的飒飒大叔大叔大的飒飒大叔大叔大叔大叔的撒旦撒";
         data.message=[text dataUsingEncoding:NSUTF8StringEncoding];
         [data prepareBuild];
         [self.messages addObject:data];
@@ -47,6 +56,7 @@
         DYMessageContent *data =[[DYMessageContent alloc] init];
         data.type=kDYMessageTypeText;
         data.userType =DYMessageUserReceiveType;
+        data.showDate = YES;
         NSString *text=@"萨达速度按时大大阿斯达十按时大大阿斯达十大的飒飒大叔大叔按时大大阿斯达十大的飒飒大叔大叔大的飒飒大叔大叔大叔大叔的撒旦撒";
         data.message=[text dataUsingEncoding:NSUTF8StringEncoding];
         [data prepareBuild];
@@ -83,6 +93,7 @@
         DYMessageContent *data =[[DYMessageContent alloc] init];
         data.type=kDYMessageTypeVoice;
         data.userType =DYMessageUserSendType;
+        data.showDate = YES;
         data.mediaTime = 10.0f;
         [data prepareBuild];
         [self.messages addObject:data];
@@ -101,6 +112,7 @@
         DYMessageContent *data =[[DYMessageContent alloc] init];
         data.type=kDYMessageTypeVoice;
         data.userType =DYMessageUserSendType;
+        data.showDate = YES;
         data.mediaTime = 20.0f;
         [data prepareBuild];
         [self.messages addObject:data];
@@ -157,7 +169,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     DYMessageContent *message = [self.messages objectAtIndex:indexPath.row];
-    return message.size.height+30.0f;
+    return message.height;
     
 }
 
@@ -171,17 +183,49 @@
         cell = [[DYMessageDataCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:DYMessageLeftCell];
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
     }else{
+        [cell resignFirstResponder];
         [cell releaseCell];
     }
     DYMessageContent *message = [self.messages objectAtIndex:indexPath.row];
     cell.message =message;
+    [cell becomeFirstResponder];
+//    switch (indexPath.row%3) {
+//        case 0:{
+//            cell.testColor =[UIColor greenColor];
+//            break;
+//        }
+//            
+//        case 1:{
+//            cell.testColor =[UIColor redColor];
+//            break;
+//        }
+//            
+//        case 2:{
+//            cell.testColor =[UIColor yellowColor];
+//            break;
+//        }
+//            
+//    }
     [cell refreshCell];
     
     return cell;
     
     
+} 
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if(!decelerate){
+        [self cellfirstResponder];
+    }
+
 }
- 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    [self cellfirstResponder];
+}
+- (void)cellfirstResponder {
+    for (UITableViewCell *cell in self.container.visibleCells) {
+        [cell becomeFirstResponder];
+    }
+}
 
 
 - (void)didReceiveMemoryWarning

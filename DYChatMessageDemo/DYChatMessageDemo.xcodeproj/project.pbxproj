@@ -40,6 +40,7 @@
 		2C5629DF1961A83300D7008B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5629C71961A83300D7008B /* UIKit.framework */; };
 		2C5629E71961A83300D7008B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C5629E51961A83300D7008B /* InfoPlist.strings */; };
 		2C5629E91961A83300D7008B /* DYChatMessageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5629E81961A83300D7008B /* DYChatMessageDemoTests.m */; };
+		2CFC2AC81965850D00D9A58D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC2AC71965850D00D9A58D /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		2C5629E41961A83300D7008B /* DYChatMessageDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DYChatMessageDemoTests-Info.plist"; sourceTree = "<group>"; };
 		2C5629E61961A83300D7008B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C5629E81961A83300D7008B /* DYChatMessageDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYChatMessageDemoTests.m; sourceTree = "<group>"; };
+		2CFC2AC71965850D00D9A58D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 		2C5629F21961A8E500D7008B /* DYChatMessageViewLibary */ = {
 			isa = PBXGroup;
 			children = (
+				2CFC2AC71965850D00D9A58D /* Default.png */,
 				2C5629F31961A98500D7008B /* Resources */,
 				2C5629F41961A98500D7008B /* Views */,
 			);
@@ -358,6 +361,7 @@
 				2C366472196560D6004C9819 /* chat_voice@2x.png in Resources */,
 				2C3FE7781965405900F5325C /* chat_bubble_left.png in Resources */,
 				2C0D0A99196455DD005774C4 /* chat_bubble_right.png in Resources */,
+				2CFC2AC81965850D00D9A58D /* Default.png in Resources */,
 				2C366471196560D6004C9819 /* chat_voice.png in Resources */,
 				2C0D0A9A196455DD005774C4 /* chat_bubble_right@2x.png in Resources */,
 				2C3FE77A1965405900F5325C /* chat_user_icon.png in Resources */,

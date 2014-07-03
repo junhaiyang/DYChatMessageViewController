@@ -16,8 +16,15 @@
     UIView<DYMessageContentViewDelegate> *_messageContentView;
     
     UIImageView *_iconView;
+    
+    
+    
+    UIImageView *_timeBubbleView;
+    
+    UILabel *timeLabel;
 }
 
+@property (nonatomic,strong) UIColor *testColor;
 
 @property (nonatomic,strong) DYMessageContent *message;
 

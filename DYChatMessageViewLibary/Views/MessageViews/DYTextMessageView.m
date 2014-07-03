@@ -45,8 +45,9 @@
     if (textSize.height > 20) {
         textSize.width = [[self class] textWidth];
     } else {
-        textSize.height = textSize.height;
+        textSize.height = 20;
     }
+    msg.height = textSize.height + 30.0f;
     
     return textSize;
 }
@@ -61,15 +62,15 @@
     
     CGFloat _contentY = 0.0f;
     
-    if(self.message.size.height<ICON_WIDTH_HEIGHT/2){
-        _contentY= (ICON_WIDTH_HEIGHT/2-self.message.size.height)/2.0f;
+    if(self.message.contentSize.height<ICON_WIDTH_HEIGHT/2){
+        _contentY= (ICON_WIDTH_HEIGHT/2-self.message.contentSize.height)/2.0f;
     }
     
     if(self.message.userType==DYMessageUserSendType){
-        textLabel.frame = CGRectMake(9, MARGIN_TOP_LEFT_RIGHT + _contentY, self.message.size.width, self.message.size.height);
+        textLabel.frame = CGRectMake(9, MARGIN_TOP_LEFT_RIGHT + _contentY, self.message.contentSize.width, self.message.contentSize.height);
         
     }else{ 
-        textLabel.frame = CGRectMake(17, MARGIN_TOP_LEFT_RIGHT + _contentY, self.message.size.width, self.message.size.height);
+        textLabel.frame = CGRectMake(17, MARGIN_TOP_LEFT_RIGHT + _contentY, self.message.contentSize.width, self.message.contentSize.height);
         
     }
 
@@ -83,6 +84,9 @@
 
 -(void)releaseView{
 
+}
+-(DYMessageMenuType)supportMenuType{
+    return DYMessageMenuTypeForward|DYMessageMenuTypeDelete|DYMessageMenuTypeCopy;
 }
 
 @end
