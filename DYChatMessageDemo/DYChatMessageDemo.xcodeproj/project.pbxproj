@@ -21,7 +21,6 @@
 		2C366472196560D6004C9819 /* chat_voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C366470196560D6004C9819 /* chat_voice@2x.png */; };
 		2C36647519656290004C9819 /* chat_voice_lg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C36647319656290004C9819 /* chat_voice_lg.png */; };
 		2C36647619656290004C9819 /* chat_voice_lg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C36647419656290004C9819 /* chat_voice_lg@2x.png */; };
-		2C366478196568AD004C9819 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C366477196568AD004C9819 /* Default.png */; };
 		2C36647B19656ACE004C9819 /* DYMessageToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C36647A19656ACE004C9819 /* DYMessageToastView.m */; };
 		2C36647E19656D09004C9819 /* chat_toast.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C36647C19656D09004C9819 /* chat_toast.png */; };
 		2C36647F19656D09004C9819 /* chat_toast@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C36647D19656D09004C9819 /* chat_toast@2x.png */; };
@@ -75,7 +74,6 @@
 		2C366470196560D6004C9819 /* chat_voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_voice@2x.png"; sourceTree = "<group>"; };
 		2C36647319656290004C9819 /* chat_voice_lg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_voice_lg.png; sourceTree = "<group>"; };
 		2C36647419656290004C9819 /* chat_voice_lg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_voice_lg@2x.png"; sourceTree = "<group>"; };
-		2C366477196568AD004C9819 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2C36647919656ACE004C9819 /* DYMessageToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMessageToastView.h; sourceTree = "<group>"; };
 		2C36647A19656ACE004C9819 /* DYMessageToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMessageToastView.m; sourceTree = "<group>"; };
 		2C36647C19656D09004C9819 /* chat_toast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_toast.png; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 		2C5629B71961A83300D7008B = {
 			isa = PBXGroup;
 			children = (
-				2C366477196568AD004C9819 /* Default.png */,
 				2C5629F21961A8E500D7008B /* DYChatMessageViewLibary */,
 				2C5629C91961A83300D7008B /* DYChatMessageDemo */,
 				2C5629E21961A83300D7008B /* DYChatMessageDemoTests */,
@@ -371,7 +368,6 @@
 				2C36647619656290004C9819 /* chat_voice_lg@2x.png in Resources */,
 				2C36647E19656D09004C9819 /* chat_toast.png in Resources */,
 				2C0D0A9319644488005774C4 /* DYChatMessageViewController.xib in Resources */,
-				2C366478196568AD004C9819 /* Default.png in Resources */,
 				2C5629D61961A83300D7008B /* Images.xcassets in Resources */,
 				2C36647519656290004C9819 /* chat_voice_lg.png in Resources */,
 			);
