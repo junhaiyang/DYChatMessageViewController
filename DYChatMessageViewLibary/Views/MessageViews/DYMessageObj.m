@@ -1,5 +1,4 @@
 //
-//  DYMessageView.m
 //  DYChatMessageDemo
 //
 //  Created by yangjunhai on 14-6-30.

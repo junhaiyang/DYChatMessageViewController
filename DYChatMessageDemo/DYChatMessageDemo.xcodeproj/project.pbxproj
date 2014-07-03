@@ -15,7 +15,16 @@
 		2C0D0A99196455DD005774C4 /* chat_bubble_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C0D0A97196455DD005774C4 /* chat_bubble_right.png */; };
 		2C0D0A9A196455DD005774C4 /* chat_bubble_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C0D0A98196455DD005774C4 /* chat_bubble_right@2x.png */; };
 		2C366465196556F8004C9819 /* DYMessageDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C366464196556F8004C9819 /* DYMessageDataCell.m */; };
-		2C3664681965585E004C9819 /* DYMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3664671965585E004C9819 /* DYMessageView.m */; };
+		2C36646B1965598A004C9819 /* DYMessageObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C36646A1965598A004C9819 /* DYMessageObj.m */; };
+		2C36646E196559EC004C9819 /* DYMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C36646D196559EC004C9819 /* DYMessageView.m */; };
+		2C366471196560D6004C9819 /* chat_voice.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C36646F196560D6004C9819 /* chat_voice.png */; };
+		2C366472196560D6004C9819 /* chat_voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C366470196560D6004C9819 /* chat_voice@2x.png */; };
+		2C36647519656290004C9819 /* chat_voice_lg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C36647319656290004C9819 /* chat_voice_lg.png */; };
+		2C36647619656290004C9819 /* chat_voice_lg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C36647419656290004C9819 /* chat_voice_lg@2x.png */; };
+		2C366478196568AD004C9819 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C366477196568AD004C9819 /* Default.png */; };
+		2C36647B19656ACE004C9819 /* DYMessageToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C36647A19656ACE004C9819 /* DYMessageToastView.m */; };
+		2C36647E19656D09004C9819 /* chat_toast.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C36647C19656D09004C9819 /* chat_toast.png */; };
+		2C36647F19656D09004C9819 /* chat_toast@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C36647D19656D09004C9819 /* chat_toast@2x.png */; };
 		2C3FE7781965405900F5325C /* chat_bubble_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3FE7741965405900F5325C /* chat_bubble_left.png */; };
 		2C3FE7791965405900F5325C /* chat_bubble_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3FE7751965405900F5325C /* chat_bubble_left@2x.png */; };
 		2C3FE77A1965405900F5325C /* chat_user_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3FE7761965405900F5325C /* chat_user_icon.png */; };
@@ -32,7 +41,6 @@
 		2C5629DF1961A83300D7008B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5629C71961A83300D7008B /* UIKit.framework */; };
 		2C5629E71961A83300D7008B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C5629E51961A83300D7008B /* InfoPlist.strings */; };
 		2C5629E91961A83300D7008B /* DYChatMessageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5629E81961A83300D7008B /* DYChatMessageDemoTests.m */; };
-		2C5629FB1961A9CE00D7008B /* DYMessageObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5629FA1961A9CE00D7008B /* DYMessageObj.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +67,19 @@
 		2C0D0A98196455DD005774C4 /* chat_bubble_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bubble_right@2x.png"; sourceTree = "<group>"; };
 		2C366463196556F8004C9819 /* DYMessageDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DYMessageDataCell.h; path = DYMessageCell/DYMessageDataCell.h; sourceTree = "<group>"; };
 		2C366464196556F8004C9819 /* DYMessageDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DYMessageDataCell.m; path = DYMessageCell/DYMessageDataCell.m; sourceTree = "<group>"; };
-		2C3664661965585E004C9819 /* DYMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMessageView.h; sourceTree = "<group>"; };
-		2C3664671965585E004C9819 /* DYMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMessageView.m; sourceTree = "<group>"; };
+		2C3664691965598A004C9819 /* DYMessageObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMessageObj.h; sourceTree = "<group>"; };
+		2C36646A1965598A004C9819 /* DYMessageObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMessageObj.m; sourceTree = "<group>"; };
+		2C36646C196559EC004C9819 /* DYMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMessageView.h; sourceTree = "<group>"; };
+		2C36646D196559EC004C9819 /* DYMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMessageView.m; sourceTree = "<group>"; };
+		2C36646F196560D6004C9819 /* chat_voice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_voice.png; sourceTree = "<group>"; };
+		2C366470196560D6004C9819 /* chat_voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_voice@2x.png"; sourceTree = "<group>"; };
+		2C36647319656290004C9819 /* chat_voice_lg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_voice_lg.png; sourceTree = "<group>"; };
+		2C36647419656290004C9819 /* chat_voice_lg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_voice_lg@2x.png"; sourceTree = "<group>"; };
+		2C366477196568AD004C9819 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		2C36647919656ACE004C9819 /* DYMessageToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMessageToastView.h; sourceTree = "<group>"; };
+		2C36647A19656ACE004C9819 /* DYMessageToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMessageToastView.m; sourceTree = "<group>"; };
+		2C36647C19656D09004C9819 /* chat_toast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_toast.png; sourceTree = "<group>"; };
+		2C36647D19656D09004C9819 /* chat_toast@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_toast@2x.png"; sourceTree = "<group>"; };
 		2C3FE7741965405900F5325C /* chat_bubble_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_bubble_left.png; sourceTree = "<group>"; };
 		2C3FE7751965405900F5325C /* chat_bubble_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bubble_left@2x.png"; sourceTree = "<group>"; };
 		2C3FE7761965405900F5325C /* chat_user_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_user_icon.png; sourceTree = "<group>"; };
@@ -81,8 +100,6 @@
 		2C5629E41961A83300D7008B /* DYChatMessageDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DYChatMessageDemoTests-Info.plist"; sourceTree = "<group>"; };
 		2C5629E61961A83300D7008B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C5629E81961A83300D7008B /* DYChatMessageDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYChatMessageDemoTests.m; sourceTree = "<group>"; };
-		2C5629F91961A9CE00D7008B /* DYMessageObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMessageObj.h; sourceTree = "<group>"; };
-		2C5629FA1961A9CE00D7008B /* DYMessageObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMessageObj.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +139,7 @@
 		2C5629B71961A83300D7008B = {
 			isa = PBXGroup;
 			children = (
+				2C366477196568AD004C9819 /* Default.png */,
 				2C5629F21961A8E500D7008B /* DYChatMessageViewLibary */,
 				2C5629C91961A83300D7008B /* DYChatMessageDemo */,
 				2C5629E21961A83300D7008B /* DYChatMessageDemoTests */,
@@ -209,6 +227,12 @@
 				2C3FE7771965405900F5325C /* chat_user_icon@2x.png */,
 				2C0D0A97196455DD005774C4 /* chat_bubble_right.png */,
 				2C0D0A98196455DD005774C4 /* chat_bubble_right@2x.png */,
+				2C36646F196560D6004C9819 /* chat_voice.png */,
+				2C366470196560D6004C9819 /* chat_voice@2x.png */,
+				2C36647319656290004C9819 /* chat_voice_lg.png */,
+				2C36647419656290004C9819 /* chat_voice_lg@2x.png */,
+				2C36647C19656D09004C9819 /* chat_toast.png */,
+				2C36647D19656D09004C9819 /* chat_toast@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -225,18 +249,20 @@
 		2C5629F51961A98500D7008B /* MessageViews */ = {
 			isa = PBXGroup;
 			children = (
+				2C3664691965598A004C9819 /* DYMessageObj.h */,
+				2C36646A1965598A004C9819 /* DYMessageObj.m */,
 				2C366463196556F8004C9819 /* DYMessageDataCell.h */,
 				2C366464196556F8004C9819 /* DYMessageDataCell.m */,
-				2C5629F91961A9CE00D7008B /* DYMessageObj.h */,
-				2C5629FA1961A9CE00D7008B /* DYMessageObj.m */,
 				2C0D0A7719643E9F005774C4 /* DYTextMessageView.h */,
 				2C0D0A7819643E9F005774C4 /* DYTextMessageView.m */,
 				2C0D0A7A19643EB2005774C4 /* DYImageMessageView.h */,
 				2C0D0A7B19643EB2005774C4 /* DYImageMessageView.m */,
 				2C0D0A7D19643EC5005774C4 /* DYVoiceMessageView.h */,
 				2C0D0A7E19643EC5005774C4 /* DYVoiceMessageView.m */,
-				2C3664661965585E004C9819 /* DYMessageView.h */,
-				2C3664671965585E004C9819 /* DYMessageView.m */,
+				2C36646C196559EC004C9819 /* DYMessageView.h */,
+				2C36646D196559EC004C9819 /* DYMessageView.m */,
+				2C36647919656ACE004C9819 /* DYMessageToastView.h */,
+				2C36647A19656ACE004C9819 /* DYMessageToastView.m */,
 			);
 			path = MessageViews;
 			sourceTree = "<group>";
@@ -332,15 +358,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C366472196560D6004C9819 /* chat_voice@2x.png in Resources */,
 				2C3FE7781965405900F5325C /* chat_bubble_left.png in Resources */,
 				2C0D0A99196455DD005774C4 /* chat_bubble_right.png in Resources */,
+				2C366471196560D6004C9819 /* chat_voice.png in Resources */,
 				2C0D0A9A196455DD005774C4 /* chat_bubble_right@2x.png in Resources */,
 				2C3FE77A1965405900F5325C /* chat_user_icon.png in Resources */,
 				2C3FE7791965405900F5325C /* chat_bubble_left@2x.png in Resources */,
 				2C5629CE1961A83300D7008B /* InfoPlist.strings in Resources */,
+				2C36647F19656D09004C9819 /* chat_toast@2x.png in Resources */,
 				2C3FE77B1965405900F5325C /* chat_user_icon@2x.png in Resources */,
+				2C36647619656290004C9819 /* chat_voice_lg@2x.png in Resources */,
+				2C36647E19656D09004C9819 /* chat_toast.png in Resources */,
 				2C0D0A9319644488005774C4 /* DYChatMessageViewController.xib in Resources */,
+				2C366478196568AD004C9819 /* Default.png in Resources */,
 				2C5629D61961A83300D7008B /* Images.xcassets in Resources */,
+				2C36647519656290004C9819 /* chat_voice_lg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,11 +392,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C36646B1965598A004C9819 /* DYMessageObj.m in Sources */,
+				2C36646E196559EC004C9819 /* DYMessageView.m in Sources */,
 				2C0D0A7919643E9F005774C4 /* DYTextMessageView.m in Sources */,
-				2C3664681965585E004C9819 /* DYMessageView.m in Sources */,
 				2C5629D41961A83300D7008B /* AppDelegate.m in Sources */,
-				2C5629FB1961A9CE00D7008B /* DYMessageObj.m in Sources */,
 				2C0D0A7C19643EB2005774C4 /* DYImageMessageView.m in Sources */,
+				2C36647B19656ACE004C9819 /* DYMessageToastView.m in Sources */,
 				2C0D0A9219644488005774C4 /* DYChatMessageViewController.m in Sources */,
 				2C0D0A7F19643EC5005774C4 /* DYVoiceMessageView.m in Sources */,
 				2C366465196556F8004C9819 /* DYMessageDataCell.m in Sources */,

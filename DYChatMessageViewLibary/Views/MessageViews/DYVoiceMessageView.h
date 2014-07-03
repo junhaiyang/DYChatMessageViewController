@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DYMessageObj.h"
+#import "DYMessageView.h"
 
-@interface DYVoiceMessageView : UIView<DYMessageContentViewDelegate>
-
-@property (nonatomic,strong) DYMessageContent *message;
+@interface DYVoiceMessageView : DYMessageView{
+    UIImageView *voiceImageView;
+    UIView *redPointView;
+    UILabel *timeLabel;
+}
+ 
 
 @end

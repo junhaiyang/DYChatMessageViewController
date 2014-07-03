@@ -19,18 +19,27 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
+        voiceImageView =[[UIImageView alloc] init];
+        
+        [_bubbleView addSubview:voiceImageView];
+        
+        redPointView =[[UIView alloc] init];
+        redPointView.backgroundColor=[UIColor redColor];
+        redPointView.layer.cornerRadius =6.0f;
+        redPointView.layer.masksToBounds =YES;
+        [_bubbleView addSubview:redPointView];
+        
+        timeLabel =[[UILabel alloc] init];
+        timeLabel.textColor=[UIColor grayColor];
+        timeLabel.backgroundColor=[UIColor clearColor];
+        timeLabel.font=[UIFont systemFontOfSize:12.0f];
+        [_bubbleView addSubview:timeLabel];
+        
     }
     return self;
 }
 
--(void)setMessage:(DYMessageContent *)_message{
-    message =_message;
-}
-
--(DYMessageContent *)message{
-    
-    return message;
-}
 
 +(CGSize)messageSizeToFit:(DYMessageContent *)msg{
     CGFloat maxWidth  = 180.0f;
@@ -47,7 +56,32 @@
 }
 
 -(void)messageStateResresh{
-
+    
+    timeLabel.text =[NSString stringWithFormat:@"%d”",(int)self.message.mediaTime];
+    
+    CGFloat _contentY  = (ICON_WIDTH_HEIGHT - 20)/2.0f;
+    
+    CGFloat _redPointY  = (ICON_WIDTH_HEIGHT - 12)/2.0f;
+    
+    if(self.message.userType==DYMessageUserSendType){
+        
+        timeLabel.frame = CGRectMake(-25, _contentY, 30, 20);
+        
+        voiceImageView.frame = CGRectMake(self.message.size.width, _contentY, 12, 20);
+        voiceImageView.image =[UIImage imageNamed:@"chat_voice_lg"];
+        redPointView.hidden = YES;
+    }else{
+        redPointView.hidden = NO;
+        
+        timeLabel.frame = CGRectMake(self.message.size.width+30, _contentY, 30, 20);
+       
+        voiceImageView.frame = CGRectMake(17, _contentY, 12, 20);
+        redPointView.frame = CGRectMake(self.message.size.width+5, _redPointY, 12, 12);
+        voiceImageView.image =[UIImage imageNamed:@"chat_voice"];
+        
+    }
+    
+    [super messageStateResresh];
 }
 
 -(void)recyleView{

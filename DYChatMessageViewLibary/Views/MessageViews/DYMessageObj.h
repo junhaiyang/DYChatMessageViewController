@@ -1,5 +1,4 @@
-//
-//  DYMessageView.h
+// 
 //  DYChatMessageDemo
 //
 //  Created by yangjunhai on 14-6-30.
@@ -36,13 +35,7 @@ typedef NS_ENUM(NSInteger, DYMessageUserType) {
     DYMessageUserReceiveType       =   1,   //接收消息
     
 };
-
-typedef NS_ENUM(NSInteger, DYMessageShowType) {
-    DYMessageShowDataType              =   0,
-    DYMessageShowToastType             =   1,
-    
-    
-};
+ 
 
 @interface DYMessageContent : NSObject
 
@@ -60,7 +53,6 @@ typedef NS_ENUM(NSInteger, DYMessageShowType) {
 
 @property (nonatomic, assign) DYMessageUserType userType;
 
-@property (nonatomic, assign) DYMessageShowType showType;
 
 -(void)prepareBuild;
 

@@ -30,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor colorWithWhite:0.639 alpha:1.000]; 
+    self.view.backgroundColor=[UIColor colorWithWhite:0.804 alpha:1.000];
     self.messages =[[NSMutableArray alloc] init];
     self.container.backgroundColor=[UIColor clearColor];
     
@@ -48,6 +48,14 @@
         data.type=kDYMessageTypeText;
         data.userType =DYMessageUserReceiveType;
         NSString *text=@"萨达速度按时大大阿斯达十按时大大阿斯达十大的飒飒大叔大叔按时大大阿斯达十大的飒飒大叔大叔大的飒飒大叔大叔大叔大叔的撒旦撒";
+        data.message=[text dataUsingEncoding:NSUTF8StringEncoding];
+        [data prepareBuild];
+        [self.messages addObject:data];
+    }{
+        DYMessageContent *data =[[DYMessageContent alloc] init];
+        data.type=kDYMessageTypeToast;
+        data.userType =DYMessageUserSendType;
+        NSString *text=@"按时大大阿斯达十大";
         data.message=[text dataUsingEncoding:NSUTF8StringEncoding];
         [data prepareBuild];
         [self.messages addObject:data];
@@ -104,6 +112,31 @@
         data.type=kDYMessageTypeVoice;
         data.userType =DYMessageUserSendType;
         data.mediaTime = 30.0f;
+        [data prepareBuild];
+        [self.messages addObject:data];
+    }
+    
+    {
+        DYMessageContent *data =[[DYMessageContent alloc] init];
+        data.type=kDYMessageTypeImage;
+        data.userType =DYMessageUserSendType;
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Default" ofType:@"png"];
+        
+        data.message = [path dataUsingEncoding:NSUTF8StringEncoding];
+        [data prepareBuild];
+        [self.messages addObject:data];
+    }
+    
+    
+    {
+        DYMessageContent *data =[[DYMessageContent alloc] init];
+        data.type=kDYMessageTypeImage;
+        data.userType =DYMessageUserReceiveType;
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Default" ofType:@"png"];
+        
+        data.message = [path dataUsingEncoding:NSUTF8StringEncoding];
         [data prepareBuild];
         [self.messages addObject:data];
     }

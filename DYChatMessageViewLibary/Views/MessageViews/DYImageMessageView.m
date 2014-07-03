@@ -19,18 +19,63 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        imageView =[[UIImageView alloc] initWithFrame:CGRectZero]; 
+        [_bubbleView addSubview:imageView];
          
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+
++(CGSize)messageSizeToFit:(DYMessageContent *)msg{
+    NSString *string = [[NSString alloc] initWithBytes:msg.message.bytes length:msg.message.length encoding:NSUTF8StringEncoding];
+    UIImage *image = [UIImage imageWithContentsOfFile:string];
+    
+    
+    CGFloat wscale = image.size.width / PIC_MAX_WIDTH_HEIGHT;
+    CGFloat hscale = image.size.height / PIC_MIN_WIDTH_HEIGHT;
+    CGFloat scale = (wscale > hscale) ? wscale : hscale;
+    CGSize imageSize = CGSizeMake(image.size.width / scale, image.size.height / scale);
+    
+    return imageSize;
 }
-*/
+
+-(CGSize)messageSizeToFit{
+    return [[self class] messageSizeToFit:self.message];
+}
+
+-(void)messageStateResresh{
+    NSString *string = [[NSString alloc] initWithBytes:self.message.message.bytes length:self.message.message.length encoding:NSUTF8StringEncoding];
+    
+    UIImage *image =  [UIImage imageWithContentsOfFile:string];
+    
+    imageView.image =image;
+    
+    CGFloat _contentY = 0.0f;
+    
+    if(self.message.size.height<ICON_WIDTH_HEIGHT/2){
+        _contentY= (ICON_WIDTH_HEIGHT/2-self.message.size.height)/2.0f;
+    }
+    
+    if(self.message.userType==DYMessageUserSendType){
+        imageView.frame = CGRectMake(9, MARGIN_TOP_LEFT_RIGHT + _contentY, self.message.size.width, self.message.size.height);
+        
+    }else{
+        imageView.frame = CGRectMake(17, MARGIN_TOP_LEFT_RIGHT + _contentY, self.message.size.width, self.message.size.height);
+        
+    }
+    
+    
+    [super messageStateResresh];
+}
+
+-(void)recyleView{
+    
+}
+
+-(void)releaseView{
+    
+}
+
 
 @end

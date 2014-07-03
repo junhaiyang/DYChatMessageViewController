@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DYMessageObj.h"
+#import "DYMessageView.h"
 
-@interface DYImageMessageView : UIView<DYMessageContentViewDelegate>
+#define PIC_MIN_WIDTH_HEIGHT  105.0f   //图片最小宽度
+#define PIC_MAX_WIDTH_HEIGHT  149.0f   //图片最大宽度
+
+@interface DYImageMessageView : DYMessageView{
+    UIImageView *imageView;
+}
 
 
 @end

@@ -13,21 +13,18 @@
 +(void)load{
     [DYMessageFactory registerMessageType:kDYMessageTypeText viewClazz:[DYTextMessageView class]];
 }
-
--(void)setMessage:(DYMessageContent *)_message{
-    message=_message;
-}
--(DYMessageContent *)message{
-    return message;
-}
+ 
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.numberOfLines =0 ;
-        self.font = [[self class] textFont];
+        textLabel =[[UILabel alloc] initWithFrame:CGRectZero];
+        textLabel.numberOfLines =0 ;
+        textLabel.font = [[self class] textFont];
+        [_bubbleView addSubview:textLabel];
+        
         self.backgroundColor =[UIColor clearColor];
     }
     return self;
@@ -60,7 +57,24 @@
 
 -(void)messageStateResresh{
     NSString *string = [[NSString alloc] initWithBytes:message.message.bytes length:message.message.length encoding:NSUTF8StringEncoding];
-    self.text =string;
+    textLabel.text =string;
+    
+    CGFloat _contentY = 0.0f;
+    
+    if(self.message.size.height<ICON_WIDTH_HEIGHT/2){
+        _contentY= (ICON_WIDTH_HEIGHT/2-self.message.size.height)/2.0f;
+    }
+    
+    if(self.message.userType==DYMessageUserSendType){
+        textLabel.frame = CGRectMake(9, MARGIN_TOP_LEFT_RIGHT + _contentY, self.message.size.width, self.message.size.height);
+        
+    }else{ 
+        textLabel.frame = CGRectMake(17, MARGIN_TOP_LEFT_RIGHT + _contentY, self.message.size.width, self.message.size.height);
+        
+    }
+
+    
+    [super messageStateResresh];
 }
 
 -(void)recyleView{
